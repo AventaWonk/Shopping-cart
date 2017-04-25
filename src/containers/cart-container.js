@@ -1,18 +1,21 @@
 import { connect } from 'react-redux'
 import Cart from '../modules/cart'
 import { addProduct, loadProducts, saveProducts } from '../actions/product-actions'
+import { changeVisibility } from '../actions/cart-actions'
 
 const mapStateToProps = (state) => {
   return {
-	count: state.count,
-    products: state.products
+	count: state.products.count,
+    products: state.products.products,
+    visibility: state.cart.visibility
   }
 }
 const mapDispatchToProps = (dispatch) => {
   return {
     addProduct: (product) => dispatch(addProduct(product)),
 	loadProducts: () => dispatch(loadProducts()),
-	saveProducts: () => dispatch(saveProducts())
+	saveProducts: () => dispatch(saveProducts()),
+	changeVisibility: () => dispatch(changeVisibility())
   }
 }
 

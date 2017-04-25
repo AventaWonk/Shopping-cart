@@ -5,11 +5,10 @@ import ProductList from './product-list';
 export default class Cart extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {showCart: true};
 		props.loadProducts();
 
 		let cartSection = document.getElementById('cart');  
-		cartSection.onclick = () => this.showCart();
+		cartSection.onclick = () => props.changeVisibility();
 		
 		let productsSection = document.getElementById('products');  
 		productsSection.onclick = sender => {
@@ -19,14 +18,10 @@ export default class Cart extends React.Component {
 		}	
     }
 	
-	showCart(){
-		this.props.addProduct("2");
-		this.setState({showCart: this.state.showCart ? false : true});
-	}
 	
 	render() {
 		return (
-			<div style={{display: this.state.showCart ? 'block' : 'none' }}>
+			<div style={{display: this.props.visibility ? 'block' : 'none' }}>
 				<h1>Cart {this.props.count}</h1>
 				<ProductList products={this.props.products} />
 			</div>
