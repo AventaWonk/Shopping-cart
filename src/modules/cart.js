@@ -7,9 +7,6 @@ export default class Cart extends React.Component {
 		super(props);
 		props.loadProducts();
 
-		let cartSection = document.getElementById('cart');  
-		cartSection.onclick = () => props.changeVisibility();
-		
 		let productsSection = document.getElementById('products');  
 		productsSection.onclick = sender => {
 			let product = sender.target.dataset;
@@ -21,10 +18,17 @@ export default class Cart extends React.Component {
 	
 	render() {
 		return (
-			<div style={{display: this.props.visibility ? 'block' : 'none' }}>
-				<h1>Cart {this.props.count}</h1>
-				<ProductList products={this.props.products} />
+			<div>
+				<a href="#" onClick={() => this.props.changeVisibility()}> Cart  
+					  <span className="badge"> {this.props.count} </span>
+				</a>
+				<div style={{display: this.props.visibility ? 'block' : 'none' }}>
+					<ProductList  products={this.props.products} />
+				</div>
+				
 			</div>
+				
+			
 		);
 	}
 }

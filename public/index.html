@@ -1,16 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shopping cart example</title>
+    <title>Simple shopping cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-	<a href="#" id='cart'></a>
-    <div id="root"></div>
-	<div id="products">
-	<a href="#" data-product-id="1" data-product-name="Product 1" data-product-price="250">Add to cart</a>
-	<a href="#" data-product-id="2" data-product-name="Product 2" data-product-price="400">Add to cart</a>
+	<nav class="navbar navbar-default">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">Simple shopping cart</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav navbar-right">
+			<li class="active" id="root"></li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+	<div class="container">
+		<div id="products">
+			<a href="#" data-product-id="1" data-product-name="Product 1" data-product-price="250">Add to cart</a>
+			<a href="#" data-product-id="2" data-product-name="Product 2" data-product-price="400">Add to cart</a>
+		</div>
 	</div>
   </body>
 </html>
