@@ -1,0 +1,11 @@
+.cart{
+
+}
+.cart-content{
+	position: absolute;
+	top: 30px;
+	right: 5px;
+	width: 400px;
+	border: 1px solid black;
+	background: white;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Product from './product';
 import ProductList from './product-list';
+import './cart.css'
 
 export default class Cart extends React.Component {
 	constructor(props) {
@@ -18,12 +19,12 @@ export default class Cart extends React.Component {
 	
 	render() {
 		return (
-			<div>
+			<div className="cart">
 				<a href="#" onClick={() => this.props.changeVisibility()}> Cart  
 					  <span className="badge"> {this.props.count} </span>
 				</a>
-				<div style={{display: this.props.visibility ? 'block' : 'none' }}>
-					<ProductList  products={this.props.products} />
+				<div className="cart-content" style={{display: this.props.visibility ? 'block' : 'none' }}>
+					<ProductList  products={this.props.products} total={this.props.total}/>
 				</div>
 				
 			</div>
