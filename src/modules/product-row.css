@@ -7,20 +7,29 @@
 }
 .cart-right{
 	margin-left: 115px;
-	min-width: 120px;
+	min-width: 150px;
 }
 .cart-item-img{
 	width: 100px;
 	float: left;
 }
 .cart-item-name{
+	margin-bottom: 15px;
+}
+.cart-item-attributes{
 	margin-bottom: 10px;
 }
-.cart-item-count{
-	margin-bottom: 10px;
+.cart-item-attributes dt{
+	float: left;
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 1px;
 }
-.cart-item-price{
-	margin-bottom: 10px;
+.cart-item-attributes dd{
+	margin-left: 70px;
+}
+.cart-item-attributes .price{
+
 }
 .cart-item-del{
 	float: right;

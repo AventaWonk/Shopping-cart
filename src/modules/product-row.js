@@ -16,22 +16,29 @@ export default class ProductRow extends React.Component{
 						</svg>
 					</a>
 					<div className="cart-item-name"> {this.props.name} </div>
-					<div className="cart-item-count">
-						<a href="#" onClick={() => this.props.increaseProduct(this.props.id)}>
-							<svg fill="#000000" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-							    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
-							    <path d="M0 0h24v24H0z" fill="none"/>
-							</svg>
-						</a>
-						{this.props.count} 
-						<a href="#" onClick={() => this.props.decreaseProduct(this.props.id)}>
-							<svg fill="#000000" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-							    <path d="M19 13H5v-2h14v2z"/>
-							    <path d="M0 0h24v24H0z" fill="none"/>
-							</svg>
-						</a>
-					 </div>
-					<div className="cart-item-price"> {this.props.price}$ </div>  
+					<div className="cart-item-attributes">
+						<dl>
+							<dt>Quantity</dt>
+							<dd>
+								<a href="#" onClick={() => this.props.increaseProduct(this.props.id)}>
+									<svg fill="#000000" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+									    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+									    <path d="M0 0h24v24H0z" fill="none"/>
+									</svg>
+								</a>
+								<span className="price">{this.props.count}</span> 
+								<a href="#" onClick={() => this.props.decreaseProduct(this.props.id)}>
+									<svg fill="#000000" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+									    <path d="M19 13H5v-2h14v2z"/>
+									    <path d="M0 0h24v24H0z" fill="none"/>
+									</svg>
+								</a>
+							</dd>
+
+							<dt>Price</dt>
+							<dd>{this.props.price}$</dd>
+						</dl>
+					 </div> 
 				</div>
 			</li>
 		)	
