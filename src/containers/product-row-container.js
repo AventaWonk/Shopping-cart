@@ -10,5 +10,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
- const ProductRowContainer = connect(null, mapDispatchToProps)(ProductRow)
- export default ProductRowContainer;
+const ProductRowContainer = connect(null, mapDispatchToProps)(ProductRow)
+export default ProductRowContainer;

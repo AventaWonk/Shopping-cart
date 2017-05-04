@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Product from './product';
 import ProductList from './product-list';
-import './cart.css'
+import '../css/cart.css'
 
 export default class Cart extends React.Component {
 	constructor(props) {

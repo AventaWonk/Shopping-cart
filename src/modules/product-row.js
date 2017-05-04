@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './product-row.css';
+import '../css/product-row.css';
 
 
 export default class ProductRow extends React.Component{
