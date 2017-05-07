@@ -1,8 +1,9 @@
 export default class Product{
-	constructor(id, name, price, count = 1) {
+	constructor(id, name, price, image, count = 1) {
 		this.id = id
 		this.name = name;
 		this.price = price;
+		this.image = image;
 		this.count = count;
 	}
 	
@@ -18,6 +19,4 @@ export default class Product{
 			return false;
 		}
 	}	
-	
 }
-

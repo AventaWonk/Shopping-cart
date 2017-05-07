@@ -32,7 +32,7 @@ function deleteProduct(state, id) {
 		}
 	}
 }
-function increaseProduct(state, id){
+function increaseProduct(state, id) {
 	let newState = {...state}
 	for(let i = 0; i < newState.products.length; i++){
 		if (newState.products[i].id == id){
@@ -60,7 +60,7 @@ function decreaseProduct(state, id) {
 		}
 	}
 }
-function saveProducts(state){
+function saveProducts(state) {
 	localStorage.setItem("Cart", JSON.stringify(state));
 }
 function loadProducts(state){

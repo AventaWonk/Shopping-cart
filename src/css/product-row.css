@@ -1,10 +1,13 @@
 .cart-item{
+	background: white;
 	font-weight: 600;
 	font-size: 14px;
 	border-top: 1px solid #f1f1f1;
 	padding: 12px;
 	clear: both;
 	overflow: hidden;
+	position: relative;
+	z-index: 5;
 }
 .cart-item:first-child{
 	border: 0;

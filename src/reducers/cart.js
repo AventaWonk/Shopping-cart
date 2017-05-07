@@ -1,6 +1,7 @@
 const initialState = {
 	visibility: true
 }
+
 function changeVisibility(state) {
 	let res;
 	if (state.visibility) {

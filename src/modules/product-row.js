@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import '../css/product-row.css';
 
-
-export default class ProductRow extends React.Component{
+export default class ProductRow extends Component{
 	render() {
 		return (
 			<li className="cart-item">
 				<div className="cart-left">
-					<img className="cart-item-img" src="http://i1.adis.ws/i/boohooamplience/azz06352_mauve_xl?$product_image_shopping_cart$"/>
+					<img className="cart-item-img" src={this.props.image} alt=""/>
 				</div>
 				<div className="cart-right">
 					<a className="cart-item-del" href="#" onClick={() => this.props.deleteProduct(this.props.id)}>
