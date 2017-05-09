@@ -7,7 +7,6 @@ import '../css/cart.css'
 export default class Cart extends Component {
 	constructor(props) {
 		super(props);
-		props.loadProducts();
 
 		let productsSection = document.getElementById('products');  
 		productsSection.onclick = sender => {

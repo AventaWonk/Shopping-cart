@@ -5,7 +5,7 @@ import { changeVisibility } from '../actions/cart-actions'
 
 const mapStateToProps = (state) => {
   return {
-	  count: state.products.count,
+	count: state.products.count,
     products: state.products.products,
     total: state.products.total,
     visibility: state.cart.visibility
@@ -14,7 +14,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     addProduct: (product) => dispatch(addProduct(product)),
-  	loadProducts: () => dispatch(loadProducts()),
   	saveProducts: () => dispatch(saveProducts()),
   	changeVisibility: () => dispatch(changeVisibility())
   }

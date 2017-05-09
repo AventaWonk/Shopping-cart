@@ -77,9 +77,8 @@ const products = (state = initialState, action) => {
 	case 'DELETE_PRODUCT': return deleteProduct(state, action.id);
 	case 'INCREASE_PRODUCT': return increaseProduct(state, action.id); 
 	case 'DECREASE_PRODUCT': return decreaseProduct(state, action.id); 
-	case 'LOAD_PRODUCTS': return loadProducts(state); 
 	case 'SAVE_PRODUCTS': saveProducts(state); 
-    default: return state;
+    default: return loadProducts(state);
   }
 }
 
