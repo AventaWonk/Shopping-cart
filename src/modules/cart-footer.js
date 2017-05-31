@@ -16,10 +16,7 @@ export default class CartFooter extends Component {
 				</div>
 			);
 		} else {
-			return (
-				<div></div>
-			);
-		}
-		
+			return <div></div>;
+		}	
 	}
 }

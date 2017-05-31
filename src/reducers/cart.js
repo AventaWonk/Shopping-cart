@@ -1,20 +1,20 @@
 const initialState = {
-	visibility: true
+	isVisible: true
 }
 
 function changeVisibility(state) {
-	let res;
-	if (state.visibility) {
-		res = false;
+	let newState = {...state};
+	if (newState.isVisible) {
+		newState.isVisible = false;
 	} else {
-		res = true;
+		newState.isVisible = true;
 	}
-	return {visibility: res}
+	return newState;
 }
 
 const cart = (state = initialState, action) => {
   switch (action.type) {	  
-	case 'CHANGE_VISIBILITY': return changeVisibility(state); 
+	  case 'CHANGE_VISIBILITY': return changeVisibility(state); 
     default: return state;
   }
 }

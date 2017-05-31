@@ -5,10 +5,10 @@ import { changeVisibility } from '../actions/cart-actions'
 
 const mapStateToProps = (state) => {
   return {
-	count: state.products.count,
+	  count: state.products.count,
     products: state.products.products,
     total: state.products.total,
-    visibility: state.cart.visibility
+    isVisible: state.cart.isVisible
   }
 }
 const mapDispatchToProps = (dispatch) => {

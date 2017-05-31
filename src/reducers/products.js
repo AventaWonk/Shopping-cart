@@ -63,7 +63,7 @@ function decreaseProduct(state, id) {
 function saveProducts(state) {
 	localStorage.setItem("Cart", JSON.stringify(state));
 }
-function loadProducts(state){
+function loadProducts(state) {
 	let newState = {...state}
 	if(localStorage.getItem("Cart") != null) {
 		newState = JSON.parse(localStorage.getItem("Cart"));
@@ -74,10 +74,10 @@ function loadProducts(state){
 const products = (state = initialState, action) => {
   switch (action.type) {	  
     case 'ADD_PRODUCT': return addProduct(state, action.product);
-	case 'DELETE_PRODUCT': return deleteProduct(state, action.id);
-	case 'INCREASE_PRODUCT': return increaseProduct(state, action.id); 
-	case 'DECREASE_PRODUCT': return decreaseProduct(state, action.id); 
-	case 'SAVE_PRODUCTS': saveProducts(state); 
+		case 'DELETE_PRODUCT': return deleteProduct(state, action.id);
+		case 'INCREASE_PRODUCT': return increaseProduct(state, action.id); 
+		case 'DECREASE_PRODUCT': return decreaseProduct(state, action.id); 
+		case 'SAVE_PRODUCTS': saveProducts(state); 
     default: return loadProducts(state);
   }
 }

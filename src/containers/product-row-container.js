@@ -4,9 +4,9 @@ import { increaseProduct, decreaseProduct, deleteProduct } from '../actions/prod
 
 const mapDispatchToProps = (dispatch) => {
   return {
-	increaseProduct: (id) => dispatch(increaseProduct(id)),
-	decreaseProduct: (id) => dispatch(decreaseProduct(id)),
-	deleteProduct: (id) => dispatch(deleteProduct(id))
+  	increaseProduct: (id) => dispatch(increaseProduct(id)),
+  	decreaseProduct: (id) => dispatch(decreaseProduct(id)),
+  	deleteProduct: (id) => dispatch(deleteProduct(id))
   }
 }
 
