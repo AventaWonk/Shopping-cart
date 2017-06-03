@@ -3,8 +3,8 @@ import cart from './cart'
 import products from './products'
 
 const appReducer = combineReducers({
-	cart,
-	products
+  cart,
+  products
 })
 
 export default appReducer

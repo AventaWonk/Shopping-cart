@@ -1,5 +1,5 @@
 export const changeVisibility = () => {
-	return {
-		type: 'CHANGE_VISIBILITY'
-	}
+  return {
+    type: 'CHANGE_VISIBILITY'
+  }
 }
